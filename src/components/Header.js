@@ -9,11 +9,12 @@ import {
 function Header() {
   return (
     <header>
-      {/* //! Top nav */}
       <div className='flex items-center flex-grow p-1 py-2 bg-amazon_blue'>
+        {/* //! Top nav */}
+
         <div className='flex items-center flex-grow mt-2 sm:flex-grow-0'>
           <Image
-            src='https://links.papareact.com/f90'
+            src='/images/amazon_logo.png'
             width={150}
             height={40}
             objectFit='contain'
@@ -50,6 +51,7 @@ function Header() {
           </div>
         </div>
       </div>
+
       {/* //! Bottom nav */}
       <div className='flex items-center p-2 pl-6 space-x-3 text-sm text-white bg-amazon_blue-light'>
         <p className='flex items-center link'>
@@ -66,7 +68,6 @@ function Header() {
         <p className='hidden link lg:inline-flex'>Clothing</p>
         <p className='hidden link lg:inline-flex'>Health & Personal Care</p>
       </div>
-      :
     </header>
   );
 }
