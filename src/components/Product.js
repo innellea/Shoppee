@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 // comps
 import Image from 'next/image';
+// deps
 import Currency from 'react-currency-formatter';
-
+// redux
+import { useDispatch } from 'react-redux';
+import { addToBasket } from '../slices/basketSlice';
 // assets
 import { StarIcon, Star } from '@heroicons/react/solid';
 
 function Product({ id, title, price, description, category, image }) {
+  const dispatch = useDispatch();
+
   const MIN_RATING = 1;
   const MAX_RATING = 5;
   const [rating, setRating] = useState(
@@ -14,6 +19,20 @@ function Product({ id, title, price, description, category, image }) {
   );
 
   const [hasPrime] = useState(Math.random() < 0.5);
+
+  const addItemToBasket = () => {
+    const product = {
+      id,
+      title,
+      price,
+      description,
+      category,
+      image,
+      hasPrime,
+    };
+    // Sending the product as an action to the REDUX store...the basket slice
+    dispatch(addToBasket(product));
+  };
 
   return (
     <div className='relative z-30 flex flex-col p-10 m-5 bg-white'>
@@ -36,7 +55,9 @@ function Product({ id, title, price, description, category, image }) {
         <Currency quantity={price} currency='GBP' />
       </div>
 
-      <button className=' button'>Add to Cart</button>
+      <button onClick={addItemToBasket} className=' button'>
+        Add to Cart
+      </button>
       {hasPrime && (
         <div className='flex items-center mt-5 space-x-2 '>
           <img

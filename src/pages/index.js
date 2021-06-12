@@ -5,6 +5,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import ProductFeed from '../components/ProductFeed';
+import Checkout from '../pages/checkout';
 
 export default function Home({ products }) {
   return (
