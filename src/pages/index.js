@@ -5,13 +5,13 @@ import React from 'react';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import ProductFeed from '../components/ProductFeed';
+
 export default function Home({ products }) {
   return (
     <div className='bg-gray-300'>
       <Head>
         <title>Amazon</title>
       </Head>
-
       <Header />
       <main className='mx-auto max-w-screen-2xl'>
         {/* Banner */}
