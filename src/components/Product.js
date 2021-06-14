@@ -8,9 +8,12 @@ import { useDispatch } from 'react-redux';
 import { addToBasket } from '../slices/basketSlice';
 // assets
 import { StarIcon, Star } from '@heroicons/react/solid';
+import productDetails from '../pages/productDetails';
+import { useRouter } from 'next/router';
 
 function Product({ id, title, price, description, category, image }) {
   const dispatch = useDispatch();
+  const router = useRouter({});
 
   const MIN_RATING = 1;
   const MAX_RATING = 5;
@@ -36,11 +39,16 @@ function Product({ id, title, price, description, category, image }) {
 
   return (
     <div className='relative z-30 flex flex-col p-10 m-5 bg-white'>
-      <p className='absolute text-xs italic text-gray-400 top-2 right-2'>
-        {category}
-      </p>
-      <Image src={image} height={200} width={200} objectFit='contain' />
-      <h4 className='my-3 line-clamp-1'>{title}</h4>
+      <div
+        onClick={() => router.push('/productDetails')}
+        className='cursor-pointer '
+      >
+        <p className='absolute text-xs italic text-gray-400 top-2 right-2'>
+          {category}
+        </p>
+        <Image src={image} height={200} width={200} objectFit='contain' />
+        <h4 className='my-3 line-clamp-1'>{title}</h4>
+      </div>
       <div className='flex'>
         {Array(rating)
           .fill()

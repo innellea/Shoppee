@@ -5,13 +5,16 @@ import React from 'react';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import ProductFeed from '../components/ProductFeed';
-import Checkout from '../pages/checkout';
+import Footer from '../components/Footer';
+import { useRouter } from 'next/router';
 
 export default function Home({ products }) {
+  const router = useRouter({});
+
   return (
     <div className='bg-gray-300'>
       <Head>
-        <title>Amazon</title>
+        <title>Shoppee</title>
       </Head>
       <Header />
       <main className='mx-auto max-w-screen-2xl'>
@@ -20,11 +23,15 @@ export default function Home({ products }) {
         {/* ProductFeed */}
         <ProductFeed products={products} />
       </main>
+      {/* TODO MAKE THIS BUTTON WORK TO SHOW PRODUCT DETAILS */}
+      <div className='justify-center '>
+        <Footer className='justify-center' />
+      </div>
     </div>
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps() {
   const products = await fetch('http://fakestoreapi.com/products').then((res) =>
     res.json()
   );

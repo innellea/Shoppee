@@ -3791,6 +3791,11 @@
   dependencies:
     "lru-cache" "^6.0.0"
 
+"html-attribute-to-react@^0.0.5":
+  "integrity" "sha512-VD07eOZirK/jTXRcRiLNBoiST3lqR5wIeql40vRy8OX0fJhJSIZ0TUDtHuJreDothSYhv9HYOWYaud9Ro2D8qQ=="
+  "resolved" "https://registry.npmjs.org/html-attribute-to-react/-/html-attribute-to-react-0.0.5.tgz"
+  "version" "0.0.5"
+
 "html-tags@^3.1.0":
   "integrity" "sha512-1qYz89hW3lFDEazhjW0yVAV87lw8lVkrJocr72XmBkMKsoSVJCQx3W8BXsC7hO2qAt8BoVjYjtAcZ9perqGnNg=="
   "resolved" "https://registry.npmjs.org/html-tags/-/html-tags-3.1.0.tgz"

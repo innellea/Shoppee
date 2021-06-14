@@ -80,15 +80,10 @@ function Header() {
           All
           <MenuIcon className='h-6 mr-1' />
         </p>
-        <p className='link'>Prime Video</p>
-        <p className='link'>Prime Video</p>
-        <p className='link'>Prime Video</p>
+        <p className='link'>Men's Clothing</p>
+        <p className='link'>Jewelry</p>
+        <p className='link'>Women's Clothing</p>
         <p className='hidden link lg:inline-flex'>Electronics</p>
-        <p className='hidden link lg:inline-flex'>Grocery</p>
-        <p className='hidden link lg:inline-flex'>Prime</p>
-        <p className='hidden link lg:inline-flex'>Shopper Toolkit</p>
-        <p className='hidden link lg:inline-flex'>Clothing</p>
-        <p className='hidden link lg:inline-flex'>Health & Personal Care</p>
       </div>
     </header>
   );
