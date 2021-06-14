@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import basketReducer from '../slices/basketSlice';
 import logger from 'redux-logger';
-
+import productDetailsReducer from '../slices/productDetailsSlice';
 const middlewares = [];
 
 if (process.env.NODE_ENV === 'development') {
@@ -12,6 +12,7 @@ if (process.env.NODE_ENV === 'development') {
 export const store = configureStore({
   reducer: {
     basket: basketReducer,
+    productDetails: productDetailsReducer,
   },
   middleware: middlewares,
 });

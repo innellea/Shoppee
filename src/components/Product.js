@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 // comps
 import Image from 'next/image';
+
 // deps
 import Currency from 'react-currency-formatter';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // redux
 import { useDispatch } from 'react-redux';
 import { addToBasket } from '../slices/basketSlice';
 // assets
 import { StarIcon, Star } from '@heroicons/react/solid';
-import productDetails from '../pages/productDetails';
-import { useRouter } from 'next/router';
 
 function Product({ id, title, price, description, category, image }) {
   const dispatch = useDispatch();
-  const router = useRouter({});
 
   const MIN_RATING = 1;
   const MAX_RATING = 5;
-  const [rating, setRating] = useState(
+  const [rating] = useState(
     Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING
   );
 
@@ -31,51 +32,67 @@ function Product({ id, title, price, description, category, image }) {
       description,
       category,
       image,
+      rating,
       hasPrime,
     };
-    // Sending the product as an action to the REDUX store...the basket slice
+
+    // Sending the product via an action to the redux store (= basket "slice")
     dispatch(addToBasket(product));
+
+    toast.success(
+      <>
+        <span className='font-bold'>Added to basket!</span>
+        <br />
+        {product.title.slice(0, 30)}
+        {product.title.length > 30 ? '…' : ''}
+      </>,
+      {
+        position: 'top-right',
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        draggablePercent: 20,
+        progress: undefined,
+      }
+    );
   };
 
   return (
-    <div className='relative z-30 flex flex-col p-10 m-5 bg-white'>
-      <div
-        onClick={() => router.push('/productDetails')}
-        className='cursor-pointer '
-      >
-        <p className='absolute text-xs italic text-gray-400 top-2 right-2'>
-          {category}
-        </p>
-        <Image src={image} height={200} width={200} objectFit='contain' />
-        <h4 className='my-3 line-clamp-1'>{title}</h4>
-      </div>
+    <div className='relative z-30 flex flex-col p-10 m-5 bg-white growing-hover'>
+      <p className='absolute text-sm italic text-gray-400 top-2 right-3'>
+        {category}
+      </p>
+      <Image src={image} width={200} height={200} objectFit='contain' />
+      <h4 className='my-3'>{title}</h4>
       <div className='flex'>
         {Array(rating)
           .fill()
           .map((_, i) => (
-            <StarIcon key={i} className='h-5 text-yellow-500 cursor-pointer' />
+            <StarIcon key={i} className='h-5 text-yellow-500' />
           ))}
       </div>
-
-      <p className='mt-2 mb-2 text-xs line-clamp-2'>{description}</p>
-
-      <div className='mb-5 '>
-        <Currency quantity={price} currency='GBP' />
+      <p className='my-2 text-xs line-clamp-2'>{description}</p>
+      <div className='mb-5'>
+        <Currency quantity={price} currency='EUR' />
       </div>
 
-      <button onClick={addItemToBasket} className=' button'>
-        Add to Cart
-      </button>
       {hasPrime && (
-        <div className='flex items-center mt-5 space-x-2 '>
+        <div className='flex items-center -mt-5 space-x-2'>
           <img
-            src='/images/prime_logo.png'
+            loading='lazy'
             className='w-12'
-            alt='prime delivery'
+            src='https://links.papareact.com/fdw'
+            alt=''
           />
-          <p className='text-xs text-gray-500 '>Free Next-day Delivery</p>
+          <p className='text-xs text-gray-500'>FREE Next-day Delivery</p>
         </div>
       )}
+
+      <button onClick={addItemToBasket} className='mt-auto button'>
+        Add to basket
+      </button>
     </div>
   );
 }

@@ -1,8 +1,10 @@
 import Image from 'next/image';
-import { useSelector } from 'react-redux';
 import Header from '../components/Header';
-import { selectItems, selectTotal } from '../slices/basketSlice';
 import CheckoutProduct from '../components/CheckoutProduct';
+
+import { useSelector } from 'react-redux';
+
+import { selectItems, selectTotal } from '../slices/basketSlice';
 import Currency from 'react-currency-formatter';
 import { useSession } from 'next-auth/client';
 import axios from 'axios';
@@ -11,7 +13,7 @@ function checkout() {
   const items = useSelector(selectItems);
   const total = useSelector(selectTotal);
   const [session] = useSession();
-  const cereateCheckOutSession = async () => {
+  const createCheckoutSession = async () => {
     const stripe = await srtirePromise;
 
     // call the backend to create a checkout session....
@@ -77,7 +79,7 @@ function checkout() {
               </h2>
 
               <button
-                onClick={cereateCheckOutSession}
+                onClick={createCheckoutSession}
                 role='link'
                 disabled={!session}
                 className={`button mt-2 ${
