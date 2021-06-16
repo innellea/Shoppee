@@ -1,17 +1,17 @@
+import { StarIcon, Star } from '@heroicons/react/solid';
+
 import React, { useState } from 'react';
-// comps
+
 import Image from 'next/image';
 
-// deps
 import Currency from 'react-currency-formatter';
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-// redux
 import { useDispatch } from 'react-redux';
+
 import { addToBasket } from '../slices/basketSlice';
-// assets
-import { StarIcon, Star } from '@heroicons/react/solid';
 
 function Product({ id, title, price, description, category, image }) {
   const dispatch = useDispatch();

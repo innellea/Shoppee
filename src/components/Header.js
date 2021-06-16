@@ -1,16 +1,20 @@
-import Image from 'next/image';
-import 'tailwindcss/tailwind.css';
 import {
   MenuIcon,
   SearchIcon,
   ShoppingCartIcon,
 } from '@heroicons/react/outline';
-// next
+
+import Image from 'next/image';
+
+import 'tailwindcss/tailwind.css';
+
 import { signIn, signOut, useSession } from 'next-auth/client';
+
 import { useRouter } from 'next/router';
-// redux
-import { selectItems } from '../slices/basketSlice';
+
 import { useSelector } from 'react-redux';
+
+import { selectItems } from '../slices/basketSlice';
 
 //
 function Header() {
@@ -54,7 +58,8 @@ function Header() {
             </p>
             <p className='font-extrabold md:text-sm'>Account & Lists</p>
           </div>
-          <div className=' link'>
+
+          <div onClick={() => router.push('/orders')} className=' link'>
             <p>Returns</p>
             <p className='font-extrabold md:text-sm'>& Orders</p>
           </div>

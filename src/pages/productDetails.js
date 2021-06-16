@@ -1,8 +1,9 @@
-import Header from '../components/Header';
-// Redux
 import { useSelector } from 'react-redux';
-import { selectItems } from '../slices/productDetailsSlice';
+
 import { useSession } from 'next-auth/client';
+
+import Header from '../components/Header';
+import { selectItems } from '../slices/productDetailsSlice';
 
 function productDetails() {
   const items = useSelector(selectItems);

@@ -1,6 +1,8 @@
 import React from 'react';
-import Product from './Product';
+
 import { ToastContainer, toast } from 'react-toastify';
+
+import Product from './Product';
 
 function ProductFeed({ products }) {
   return (
