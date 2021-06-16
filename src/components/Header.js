@@ -47,7 +47,7 @@ function Header() {
           />
           <SearchIcon className='h-12 p-4 6' />
         </div>
-        {/* Right */}
+        {/* //! Right */}
         <div className='flex items-center px-3 space-x-6 text-xs text-white whitespace-nowrap'>
           <div
             onClick={!session ? signIn : signOut}
@@ -58,7 +58,7 @@ function Header() {
             </p>
             <p className='font-extrabold md:text-sm'>Account & Lists</p>
           </div>
-
+          {/* //! Orders */}
           <div onClick={() => router.push('/orders')} className=' link'>
             <p>Returns</p>
             <p className='font-extrabold md:text-sm'>& Orders</p>
