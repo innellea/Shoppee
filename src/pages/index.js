@@ -17,7 +17,7 @@ export default function Home({ products }) {
       <Head>
         <title>Shoppee</title>
       </Head>
-      <Header />
+      <Header products={products} />
       <main className='mx-auto max-w-screen-2xl'>
         {/* Banner */}
         <Banner />

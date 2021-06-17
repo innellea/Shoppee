@@ -17,10 +17,11 @@ import { useSelector } from 'react-redux';
 import { selectItems } from '../slices/basketSlice';
 
 //
-function Header() {
+function Header(products) {
   const [session] = useSession();
   const router = useRouter({});
   const items = useSelector(selectItems);
+
   return (
     <header>
       <div className='flex items-center flex-grow p-1 py-2 bg-amazon_blue'>
@@ -85,6 +86,7 @@ function Header() {
           All
           <MenuIcon className='h-6 mr-1' />
         </p>
+
         <p className='link'>Men's Clothing</p>
         <p className='link'>Jewelry</p>
         <p className='link'>Women's Clothing</p>
