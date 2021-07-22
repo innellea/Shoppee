@@ -1,13 +1,12 @@
-import { buffer } from 'micro';
+import { buffer } from "micro"; // @todo: what's micro ? RTFM!
+import * as admin from "firebase-admin";
 
-import * as admin from 'firebase-admin';
-
-const serviceAccount = require('../../../serviceAccount'); // Can't do an import here!
+const serviceAccount = require("../../../permissions.json"); // Can't do an import here!
 
 // Merge permissions with environment secret keys
-serviceAccount.client_id = process.env.REACT_APP_FIREBASE_CLIENT_ID;
-serviceAccount.private_key_id = process.env.REACT_APP_FIREBASE_PRIVATE_KEY_ID;
-serviceAccount.private_key = process.env.REACT_APP_FIREBASE_PRIVATE_KEY;
+serviceAccount.client_id = process.env.FIREBASE_ADMIN_CLIENT_ID;
+serviceAccount.private_key_id = process.env.FIREBASE_ADMIN_PRIVATE_KEY_ID;
+serviceAccount.private_key = process.env.FIREBASE_ADMIN_PRIVATE_KEY;
 
 const app = !admin.apps.length
     ? admin.initializeApp({
@@ -16,10 +15,10 @@ const app = !admin.apps.length
     : admin.app();
 
 // Etablish connection to Stripe
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const endpointSecret = process.env.STRIPE_SIGNING_SECRET; // WHERE IS THIS?
 const fulfillOrder = async (session) => {
-    console.log('Fulfilling order', session);
+    console.log("Fulfilling order", session);
 
     const images = JSON.parse(session.metadata.images).map((image) =>
         JSON.stringify(image)
@@ -27,9 +26,9 @@ const fulfillOrder = async (session) => {
 
     return app
         .firestore()
-        .collection('AMAZON_users')
+        .collection("AMAZON_users")
         .doc(session.metadata.email)
-        .collection('orders')
+        .collection("orders")
         .doc(session.id)
         .set({
             amount: session.amount_total / 100,
@@ -46,10 +45,10 @@ const fulfillOrder = async (session) => {
 };
 
 export default async (req, res) => {
-    if (req.method === 'POST') {
+    if (req.method === "POST") {
         const requestBuffer = await buffer(req);
         const payload = requestBuffer.toString();
-        const sig = req.headers['stripe-signature'];
+        const sig = req.headers["stripe-signature"];
 
         let event;
         // Verify that the EVENT posted came from stripe :
@@ -62,12 +61,12 @@ export default async (req, res) => {
                 endpointSecret
             );
         } catch (err) {
-            console.log('ERROR', err.message);
+            console.log("ERROR", err.message);
             return res.status(400).send(`Webhook error: ${err.message}`);
         }
 
         // Handle the checkout.session.completed event
-        if (event.type === 'checkout.session.completed') {
+        if (event.type === "checkout.session.completed") {
             const session = event.data.object;
 
             // Fulfill the order...

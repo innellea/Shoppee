@@ -1,19 +1,25 @@
-import firebase from 'firebase';
+import firebase from "firebase";
 
-var firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-    authDomain: 'shoppee-20050.firebaseapp.com',
-    projectId: 'shoppee-20050',
-    storageBucket: 'shoppee-20050.appspot.com',
-    messagingSenderId: '10861477635',
-    appId: '1:10861477635:web:71bc178dd7b4d7c0b93336',
-    measurementId: 'G-E0YCFJXX26',
+const firebaseConfig = {
+    apiKey: "AIzaSyCqw9khUKGUR9XU4cMSeX7_gTZYmVKlmJQ",
+    authDomain: "ultimate-ninja-67.firebaseapp.com",
+    databaseURL: "https://ultimate-ninja-67.firebaseio.com",
+    projectId: "ultimate-ninja-67",
+    storageBucket: "ultimate-ninja-67.appspot.com",
+    messagingSenderId: "246024766381",
+    appId: "1:246024766381:web:50eb134eb0659e461d9724",
 };
-// Initialize Firebase
+
 const app = !firebase.apps.length
     ? firebase.initializeApp(firebaseConfig)
     : firebase.app();
 
-const db = app.firestore();
+export const db = app.firestore();
 
-export default db;
+// no analitycs
+
+// go authentication
+// enable google
+// valid email
+// web sdk configuration
+// change .env
