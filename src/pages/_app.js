@@ -1,17 +1,33 @@
-import '../styles/globals.css';
+import { Provider } from "react-redux";
+import { store } from "../app/store";
 
-import { Provider } from 'react-redux';
+import "react-toastify/dist/ReactToastify.css";
+import "../styles/globals.css";
+import "../styles/custom.css";
 
-import { store } from '../app/store';
+import StorageService from "../services/StorageService";
+import { Provider as AuthProvider } from "next-auth/client";
+import { ToastContainer, Zoom } from "react-toastify";
+import { hydrate } from "../slices/basketSlice";
 
-import { Provider as AuthProvider } from 'next-auth/client';
+store.subscribe(() => {
+    StorageService.set("basket", JSON.stringify(store.getState().basket));
+});
 
-const MyApp = ({ Component, pageProps }) => (
-  <AuthProvider session={pageProps.session}>
-    <Provider store={store}>
-      <Component {...pageProps} />
-    </Provider>
-  </AuthProvider>
-);
+let basket = StorageService.get("basket");
+basket = basket ? JSON.parse(basket) : { items: [] };
+store.dispatch(hydrate(basket));
+
+const MyApp = ({ Component, pageProps }) => {
+    return (
+        <AuthProvider session={pageProps.session}>
+            {/* Gives the session's info to the components via a Provider */}
+            <Provider store={store}>
+                <Component {...pageProps} />
+                <ToastContainer transition={Zoom} />
+            </Provider>
+        </AuthProvider>
+    );
+};
 
 export default MyApp;

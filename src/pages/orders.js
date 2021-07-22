@@ -1,85 +1,98 @@
-import moment from 'moment';
-import { useSession } from 'next-auth/client';
-import { getSession } from 'next-auth/client';
-import Header from '../components/Header';
-import db from '../../firebase';
-import Order from '../components/Order';
+import { getSession, useSession } from "next-auth/client";
+import { db } from "../../firebase";
+import Header from "../components/Header";
+import Order from "../components/Order";
+import moment from "moment";
+import { useRouter } from "next/router";
+
 function Orders({ orders }) {
-  const [session] = useSession();
-  console.log(orders);
-  return (
-    <div>
-      <Header />
-      <main className='p-10 mx-auto max-w-scren-lg'>
-        <h1 className='pb-1 mb-2 text-3xl border-b border-yellow-400'>
-          Your orders
-        </h1>
-        {session ? (
-          <h2 className='text-base'>{orders.length} orders</h2>
-        ) : (
-          <h2>Please sign-in to check your orders</h2>
-        )}
-        <div className='mt-5 space-y-5'>
-          {orders?.map(
-            ({ id, amount, amountShipping, items, timestamp, images }) => (
-              <Order
-                key={id}
-                id={id}
-                amount={amount}
-                amountShipping={amountShipping}
-                items={items}
-                images={images}
-                timestamp={timestamp}
-              />
-            )
-          )}
+    const [session] = useSession();
+    const router = useRouter();
+
+    return (
+        <div>
+            <Header />
+            <main className="max-w-screen-lg mx-auto p-10">
+                <h1 className="text-3xl border-b mb-2 pb-1 border-yellow-400">
+                    Your orders
+                </h1>
+
+                {session ? (
+                    <h2 className="text-xl">
+                        {orders.length > 0 ? (
+                            <>
+                                {orders.length} Order{orders.length > 1 && "s"}
+                            </>
+                        ) : (
+                            <>
+                                You don't have any order yet. Go visit the{" "}
+                                <button
+                                    onClick={() => router.push("/")}
+                                    className="link text-yellow-400 underline hover:no-underline">
+                                    Homepage Store
+                                </button>{" "}
+                                to purchase some items.
+                            </>
+                        )}
+                    </h2>
+                ) : (
+                    <h2>Please sign in to see your orders.</h2>
+                )}
+
+                <div className="mt-5 space-y-4">
+                    {orders?.map((order) => (
+                        <Order
+                            key={order.id}
+                            id={order.id}
+                            amount={order.amount}
+                            amountShipping={order.amountShipping}
+                            images={order.images}
+                            timestamp={order.timestamp}
+                            items={order.items}
+                        />
+                    ))}
+                </div>
+            </main>
         </div>
-      </main>
-    </div>
-  );
+    );
 }
 
 export default Orders;
 
+// Tells nextJS that's no longer a static page
+// eg "Please calculate smthg and send it to the user next"
+// Here, it's executed by Node.js
 export async function getServerSideProps(context) {
-  const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+    const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-  // Get the users logged in credentials...
-  const session = await getSession(context);
+    // Get the user logged in credentials...
+    const session = await getSession(context);
 
-  if (!session) {
-    return {
-      props: {},
-    };
-  }
+    if (!session) {
+        return { props: {} };
+    }
 
-  // Firebase db
-  const stripeOrders = await db
-    .collection('users')
-    .doc(session.user.email)
-    .collection('orders')
-    .orderBy('timestamp', 'desc')
-    .get();
+    const stripeOrders = await db
+        .collection("AMAZON_users")
+        .doc(session.user.email)
+        .collection("orders")
+        .orderBy("timestamp", "desc")
+        .get();
 
-  // Stripe orders
-  const orders = await Promise.all(
-    stripeOrders.docs.map(async (order) => ({
-      id: order.id,
-      amount: order.data().amount,
-      amountShipping: order.data().amount_shipping,
-      images: order.data().images,
-      timestamp: moment(order.data().timestamp.toDate()).unix(),
-      items: (
-        await stripe.checkout.sessions.listLineItems(order.id, {
-          limit: 100,
-        })
-      ).data,
-    }))
-  );
+    const orders = await Promise.all(
+        stripeOrders.docs.map(async (order) => ({
+            id: order.id,
+            amount: order.data().amount,
+            amountShipping: order.data().amount_shipping,
+            images: order.data().images,
+            timestamp: moment(order.data().timestamp.toDate()).unix(),
+            items: (
+                await stripe.checkout.sessions.listLineItems(order.id, {
+                    limit: 100,
+                })
+            ).data,
+        }))
+    );
 
-  return {
-    props: {
-      orders,
-    },
-  };
+    return { props: { orders } };
 }

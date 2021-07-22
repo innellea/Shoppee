@@ -12,6 +12,9 @@ module.exports = {
           light: '#232F3E',
           DEFAULT: '#131921',
         },
+        asos_black: {
+          DEFAULT: '#1e1f1c',
+        },
       },
     },
   },
