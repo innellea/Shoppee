@@ -30,6 +30,7 @@
         "react-redux": "^7.2.2",
         "react-responsive-carousel": "^3.2.18",
         "react-toastify": "^7.0.4",
+        "react-transition-group": "^4.4.2",
         "redux": "^4.1.0",
         "redux-logger": "^3.0.6",
         "stripe": "^8.154.0"
