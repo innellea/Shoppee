@@ -1,6 +1,6 @@
 import firebase from "firebase";
 var firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    apiKey: process.env.FIREBASE_API_KEY,
     authDomain: "shoppee-20050.firebaseapp.com",
     projectId: "shoppee-20050",
     storageBucket: "shoppee-20050.appspot.com",
