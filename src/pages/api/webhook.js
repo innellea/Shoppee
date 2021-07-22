@@ -1,13 +1,13 @@
-import { buffer } from 'micro'; 
+import { buffer } from 'micro';
 
 import * as admin from 'firebase-admin';
 
-const serviceAccount = require('../../../permissions.js'); // Can't do an import here!
+const serviceAccount = require('../../../serviceAccount'); // Can't do an import here!
 
 // Merge permissions with environment secret keys
-serviceAccount.client_id = process.env.FIREBASE_ADMIN_CLIENT_ID;
-serviceAccount.private_key_id = process.env.FIREBASE_ADMIN_PRIVATE_KEY_ID;
-serviceAccount.private_key = process.env.FIREBASE_ADMIN_PRIVATE_KEY;
+serviceAccount.client_id = process.env.REACT_APP_FIREBASE_CLIENT_ID;
+serviceAccount.private_key_id = process.env.REACT_APP_FIREBASE_PRIVATE_KEY_ID;
+serviceAccount.private_key = process.env.REACT_APP_FIREBASE_PRIVATE_KEY;
 
 const app = !admin.apps.length
     ? admin.initializeApp({
