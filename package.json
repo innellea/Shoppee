@@ -15,7 +15,7 @@
         "axios": "^0.21.1",
         "firebase": "^8.6.2",
         "firebase-admin": "^9.8.0",
-        "lodash": "^4.17.21",
+        "lodash": "4.17.21",
         "micro": "^9.3.4",
         "moment": "^2.29.1",
         "next": "latest",
