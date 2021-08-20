@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@heroicons/react': ^1.0.1
-  '@reduxjs/toolkit': 1.5.0
+  '@reduxjs/toolkit': 1.6.1
   '@stripe/stripe-js': ^1.15.0
   '@tailwindcss/line-clamp': ^0.2.0
   autoprefixer: ^10.2.5
@@ -27,7 +27,7 @@ specifiers:
 
 dependencies:
   '@heroicons/react': 1.0.3_react@17.0.2
-  '@reduxjs/toolkit': 1.5.0
+  '@reduxjs/toolkit': 1.6.1_react-redux@7.2.4+react@17.0.2
   '@stripe/stripe-js': 1.16.0
   '@tailwindcss/line-clamp': 0.2.1_tailwindcss@2.2.7
   axios: 0.21.1
@@ -720,10 +720,20 @@ packages:
     resolution: {integrity: sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=}
     dev: false
 
-  /@reduxjs/toolkit/1.5.0:
-    resolution: {integrity: sha512-E/FUraRx+8guw9Hlg/Ja8jI/hwCrmIKed8Annt9YsZw3BQp+F24t5I5b2OWR6pkEHY4hn1BgP08FrTZFRKsdaQ==}
+  /@reduxjs/toolkit/1.6.1_react-redux@7.2.4+react@17.0.2:
+    resolution: {integrity: sha512-pa3nqclCJaZPAyBhruQtiRwtTjottRrVJqziVZcWzI73i6L3miLTtUyWfauwv08HWtiXLx1xGyGt+yLFfW/d0A==}
+    peerDependencies:
+      react: ^16.14.0 || ^17.0.0
+      react-redux: ^7.2.1
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-redux:
+        optional: true
     dependencies:
-      immer: 8.0.4
+      immer: 9.0.5
+      react: 17.0.2
+      react-redux: 7.2.4_react-dom@17.0.2+react@17.0.2
       redux: 4.1.0
       redux-thunk: 2.3.0
       reselect: 4.0.0
@@ -2235,8 +2245,8 @@ packages:
       queue: 6.0.2
     dev: false
 
-  /immer/8.0.4:
-    resolution: {integrity: sha512-jMfL18P+/6P6epANRvRk6q8t+3gGhqsJ9EuJ25AXE+9bNTYtssvzeYbEd0mXRYWCmmXSIbnlpz6vd6iJlmGGGQ==}
+  /immer/9.0.5:
+    resolution: {integrity: sha512-2WuIehr2y4lmYz9gaQzetPR2ECniCifk4ORaQbU3g5EalLt+0IVTosEPJ5BoYl/75ky2mivzdRzV8wWgQGOSYQ==}
     dev: false
 
   /import-cwd/3.0.0:
