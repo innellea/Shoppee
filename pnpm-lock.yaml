@@ -18,7 +18,7 @@ specifiers:
   react: 17.0.2
   react-currency-formatter: ^1.1.0
   react-dom: 17.0.2
-  react-redux: 7.2.5
+  react-redux: 7.2.6
   react-responsive-carousel: ^3.2.18
   react-toastify: ^7.0.4
   react-transition-group: ^4.4.1
@@ -27,7 +27,7 @@ specifiers:
 
 dependencies:
   '@heroicons/react': 1.0.3_react@17.0.2
-  '@reduxjs/toolkit': 1.6.2_react-redux@7.2.5+react@17.0.2
+  '@reduxjs/toolkit': 1.6.2_react-redux@7.2.6+react@17.0.2
   '@stripe/stripe-js': 1.16.0
   '@tailwindcss/line-clamp': 0.2.1_tailwindcss@2.2.7
   axios: 0.23.0
@@ -41,7 +41,7 @@ dependencies:
   react: 17.0.2
   react-currency-formatter: 1.1.0_react@17.0.2
   react-dom: 17.0.2_react@17.0.2
-  react-redux: 7.2.5_react-dom@17.0.2+react@17.0.2
+  react-redux: 7.2.6_react-dom@17.0.2+react@17.0.2
   react-responsive-carousel: 3.2.20
   react-toastify: 7.0.4_react-dom@17.0.2+react@17.0.2
   react-transition-group: 4.4.2_react-dom@17.0.2+react@17.0.2
@@ -102,6 +102,13 @@ packages:
 
   /@babel/runtime/7.15.3:
     resolution: {integrity: sha512-OvwMLqNXkCXSz1kSm58sEsNuhqOx/fKpnUnKnFB5v8uDda5bLNEHNgKPvhDN6IU0LDcnHQ90LlJ0Q6jnyBSIBA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.13.9
+    dev: false
+
+  /@babel/runtime/7.15.4:
+    resolution: {integrity: sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==}
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.9
@@ -577,7 +584,7 @@ packages:
       '@prisma/client': ^2.16.1
       next-auth: ^3.17.2
     dependencies:
-      '@babel/runtime': 7.14.8
+      '@babel/runtime': 7.15.4
       next-auth: 3.27.3_react-dom@17.0.2+react@17.0.2
     dev: false
 
@@ -599,7 +606,7 @@ packages:
       pg:
         optional: true
     dependencies:
-      '@babel/runtime': 7.14.8
+      '@babel/runtime': 7.15.4
       next-auth: 3.27.3_react-dom@17.0.2+react@17.0.2
       require_optional: 1.0.1
       typeorm: 0.2.34
@@ -759,7 +766,7 @@ packages:
     resolution: {integrity: sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=}
     dev: false
 
-  /@reduxjs/toolkit/1.6.2_react-redux@7.2.5+react@17.0.2:
+  /@reduxjs/toolkit/1.6.2_react-redux@7.2.6+react@17.0.2:
     resolution: {integrity: sha512-HbfI/hOVrAcMGAYsMWxw3UJyIoAS9JTdwddsjlr5w3S50tXhWb+EMyhIw+IAvCVCLETkzdjgH91RjDSYZekVBA==}
     peerDependencies:
       react: ^16.14.0 || ^17.0.0
@@ -772,7 +779,7 @@ packages:
     dependencies:
       immer: 9.0.6
       react: 17.0.2
-      react-redux: 7.2.5_react-dom@17.0.2+react@17.0.2
+      react-redux: 7.2.6_react-dom@17.0.2+react@17.0.2
       redux: 4.1.0
       redux-thunk: 2.3.0
       reselect: 4.0.0
@@ -878,8 +885,8 @@ packages:
     resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==}
     dev: false
 
-  /@types/react-redux/7.1.18:
-    resolution: {integrity: sha512-9iwAsPyJ9DLTRH+OFeIrm9cAbIj1i2ANL3sKQFATqnPWRbg+jEFXyZOKHiQK/N86pNRXbb4HRxAxo0SIX1XwzQ==}
+  /@types/react-redux/7.1.20:
+    resolution: {integrity: sha512-q42es4c8iIeTgcnB+yJgRTTzftv3eYYvCZOh1Ckn2eX/3o5TdsQYKUWpLoLuGlcY/p+VAhV9IOEZJcWk/vfkXw==}
     dependencies:
       '@types/hoist-non-react-statics': 3.3.1
       '@types/react': 17.0.19
@@ -1643,7 +1650,7 @@ packages:
   /dom-helpers/5.2.1:
     resolution: {integrity: sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==}
     dependencies:
-      '@babel/runtime': 7.14.8
+      '@babel/runtime': 7.15.4
       csstype: 3.0.8
     dev: false
 
@@ -3525,8 +3532,8 @@ packages:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
     dev: false
 
-  /react-redux/7.2.5_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-Dt29bNyBsbQaysp6s/dN0gUodcq+dVKKER8Qv82UrpeygwYeX1raTtil7O/fftw/rFqzaf6gJhDZRkkZnn6bjg==}
+  /react-redux/7.2.6_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-10RPdsz0UUrRL1NZE0ejTkucnclYSgXp5q+tB5SWx2qeG2ZJQJyymgAhwKy73yiL/13btfB6fPr+rgbMAaZIAQ==}
     peerDependencies:
       react: ^16.8.3 || ^17
       react-dom: '*'
@@ -3537,14 +3544,14 @@ packages:
       react-native:
         optional: true
     dependencies:
-      '@babel/runtime': 7.14.8
-      '@types/react-redux': 7.1.18
+      '@babel/runtime': 7.15.4
+      '@types/react-redux': 7.1.20
       hoist-non-react-statics: 3.3.2
       loose-envify: 1.4.0
       prop-types: 15.7.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      react-is: 16.13.1
+      react-is: 17.0.2
     dev: false
 
   /react-refresh/0.8.3:
@@ -3642,7 +3649,7 @@ packages:
   /redux/4.1.0:
     resolution: {integrity: sha512-uI2dQN43zqLWCt6B/BMGRMY6db7TTY4qeHHfGeKb3EOhmOKjU3KdWvNLJyqaHRksv/ErdNH7cFZWg9jXtewy4g==}
     dependencies:
-      '@babel/runtime': 7.15.3
+      '@babel/runtime': 7.15.4
     dev: false
 
   /reflect-metadata/0.1.13:
