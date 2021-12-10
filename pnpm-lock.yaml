@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@heroicons/react': ^1.0.1
-  '@reduxjs/toolkit': 1.6.2
+  '@reduxjs/toolkit': 1.7.0
   '@stripe/stripe-js': ^1.15.0
   '@tailwindcss/line-clamp': ^0.3.0
   autoprefixer: ^10.2.5
@@ -27,7 +27,7 @@ specifiers:
 
 dependencies:
   '@heroicons/react': 1.0.3_react@17.0.2
-  '@reduxjs/toolkit': 1.6.2_react-redux@7.2.6+react@17.0.2
+  '@reduxjs/toolkit': 1.7.0_react-redux@7.2.6+react@17.0.2
   '@stripe/stripe-js': 1.16.0
   '@tailwindcss/line-clamp': 0.3.0_tailwindcss@2.2.7
   axios: 0.24.0
@@ -820,23 +820,23 @@ packages:
     resolution: {integrity: sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=}
     dev: false
 
-  /@reduxjs/toolkit/1.6.2_react-redux@7.2.6+react@17.0.2:
-    resolution: {integrity: sha512-HbfI/hOVrAcMGAYsMWxw3UJyIoAS9JTdwddsjlr5w3S50tXhWb+EMyhIw+IAvCVCLETkzdjgH91RjDSYZekVBA==}
+  /@reduxjs/toolkit/1.7.0_react-redux@7.2.6+react@17.0.2:
+    resolution: {integrity: sha512-iApo4zS+8kWnIn4xucTDWpqRjDNkXruFIyJQWwThIEIbMj5kwqvbMaQcEgd2a305B68Z+4bvZqAqJSATeddaJA==}
     peerDependencies:
-      react: ^16.14.0 || ^17.0.0
-      react-redux: ^7.2.1
+      react: ^16.9.0 || ^17.0.0 || 18.0.0-beta
+      react-redux: ^7.2.1 || ^8.0.0-beta
     peerDependenciesMeta:
       react:
         optional: true
       react-redux:
         optional: true
     dependencies:
-      immer: 9.0.6
+      immer: 9.0.7
       react: 17.0.2
       react-redux: 7.2.6_react-dom@17.0.2+react@17.0.2
-      redux: 4.1.0
-      redux-thunk: 2.3.0
-      reselect: 4.0.0
+      redux: 4.1.2
+      redux-thunk: 2.4.1_redux@4.1.2
+      reselect: 4.1.5
     dev: false
 
   /@sqltools/formatter/1.2.3:
@@ -945,7 +945,7 @@ packages:
       '@types/hoist-non-react-statics': 3.3.1
       '@types/react': 17.0.19
       hoist-non-react-statics: 3.3.2
-      redux: 4.1.0
+      redux: 4.1.2
     dev: false
 
   /@types/react/17.0.19:
@@ -2319,8 +2319,8 @@ packages:
       queue: 6.0.2
     dev: false
 
-  /immer/9.0.6:
-    resolution: {integrity: sha512-G95ivKpy+EvVAnAab4fVa4YGYn24J1SpEktnJX7JJ45Bd7xqME/SCplFzYFmTbrkwZbQ4xJK1xMTUYBkN6pWsQ==}
+  /immer/9.0.7:
+    resolution: {integrity: sha512-KGllzpbamZDvOIxnmJ0jI840g7Oikx58lBPWV0hUh7dtAyZpFqqrBZdKka5GlTwMTZ1Tjc/bKKW4VSFAt6BqMA==}
     dev: false
 
   /import-cwd/3.0.0:
@@ -3589,12 +3589,16 @@ packages:
       postcss-value-parser: 3.3.1
     dev: true
 
-  /redux-thunk/2.3.0:
-    resolution: {integrity: sha512-km6dclyFnmcvxhAcrQV2AkZmPQjzPDjgVlQtR0EQjxZPyJ0BnMf3in1ryuR8A2qU0HldVRfxYXbFSKlI3N7Slw==}
+  /redux-thunk/2.4.1_redux@4.1.2:
+    resolution: {integrity: sha512-OOYGNY5Jy2TWvTL1KgAlVy6dcx3siPJ1wTq741EPyUKfn6W6nChdICjZwCd0p8AZBs5kWpZlbkXW2nE/zjUa+Q==}
+    peerDependencies:
+      redux: ^4
+    dependencies:
+      redux: 4.1.2
     dev: false
 
-  /redux/4.1.0:
-    resolution: {integrity: sha512-uI2dQN43zqLWCt6B/BMGRMY6db7TTY4qeHHfGeKb3EOhmOKjU3KdWvNLJyqaHRksv/ErdNH7cFZWg9jXtewy4g==}
+  /redux/4.1.2:
+    resolution: {integrity: sha512-SH8PglcebESbd/shgf6mii6EIoRM0zrQyjcuQ+ojmfxjTtE0z9Y8pa62iA/OJ58qjP6j27uyW4kUF4jl/jd6sw==}
     dependencies:
       '@babel/runtime': 7.15.4
     dev: false
@@ -3623,8 +3627,8 @@ packages:
       semver: 5.7.1
     dev: false
 
-  /reselect/4.0.0:
-    resolution: {integrity: sha512-qUgANli03jjAyGlnbYVAV5vvnOmJnODyABz51RdBN7M4WaVu8mecZWgyQNkG8Yqe3KRGRt0l4K4B3XVEULC4CA==}
+  /reselect/4.1.5:
+    resolution: {integrity: sha512-uVdlz8J7OO+ASpBYoz1Zypgx0KasCY20H+N8JD13oUMtPvSHQuscrHop4KbXrbsBcdB9Ds7lVK7eRkBIfO43vQ==}
     dev: false
 
   /resolve-from/2.0.0:
