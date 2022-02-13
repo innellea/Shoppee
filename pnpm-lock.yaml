@@ -6,7 +6,7 @@ specifiers:
   '@stripe/stripe-js': ^1.15.0
   '@tailwindcss/line-clamp': ^0.3.0
   autoprefixer: ^10.2.5
-  axios: ^0.25.0
+  axios: ^0.26.0
   firebase: ^8.6.2
   firebase-admin: ^9.8.0
   lodash: ^4.17.21
@@ -30,7 +30,7 @@ dependencies:
   '@reduxjs/toolkit': 1.7.2_react-redux@7.2.6+react@17.0.2
   '@stripe/stripe-js': 1.16.0
   '@tailwindcss/line-clamp': 0.3.0_tailwindcss@2.2.7
-  axios: 0.25.0
+  axios: 0.26.0
   firebase: 8.8.0
   firebase-admin: 9.11.0
   lodash: 4.17.21
@@ -1006,10 +1006,10 @@ packages:
       postcss-value-parser: 4.1.0
     dev: true
 
-  /axios/0.25.0:
-    resolution: {integrity: sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==}
+  /axios/0.26.0:
+    resolution: {integrity: sha512-lKoGLMYtHvFrPVt3r+RBMp9nh34N0M8zEfCWqdWZx6phynIEhQqAdydpyBAAG211zlhX9Rgu08cOamy6XjE5Og==}
     dependencies:
-      follow-redirects: 1.14.7
+      follow-redirects: 1.14.8
     transitivePeerDependencies:
       - debug
     dev: false
@@ -1502,8 +1502,8 @@ packages:
       '@firebase/util': 1.1.0
     dev: false
 
-  /follow-redirects/1.14.7:
-    resolution: {integrity: sha512-+hbxoLbFMbRKDwohX8GkTataGqO6Jb7jGwpAlwgy2bIz25XtRm7KEzJM76R1WiNT5SwZkX4Y75SwBolkpmE7iQ==}
+  /follow-redirects/1.14.8:
+    resolution: {integrity: sha512-1x0S9UVJHsQprFcEC/qnNzBLcIxsjAV905f/UkQxbclCsoTWlacCNOpQa/anodLl2uaEKFhfWOvM2Qg77+15zA==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
