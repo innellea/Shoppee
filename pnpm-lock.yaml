@@ -4,7 +4,7 @@ specifiers:
   '@heroicons/react': ^1.0.1
   '@reduxjs/toolkit': 1.8.1
   '@stripe/stripe-js': ^1.15.0
-  '@tailwindcss/line-clamp': ^0.3.0
+  '@tailwindcss/line-clamp': ^0.4.0
   autoprefixer: ^10.2.5
   axios: ^0.27.0
   firebase: ^8.6.2
@@ -29,7 +29,7 @@ dependencies:
   '@heroicons/react': 1.0.3_react@17.0.2
   '@reduxjs/toolkit': 1.8.1_react-redux@7.2.8+react@17.0.2
   '@stripe/stripe-js': 1.16.0
-  '@tailwindcss/line-clamp': 0.3.0_tailwindcss@2.2.7
+  '@tailwindcss/line-clamp': 0.4.0_tailwindcss@2.2.7
   axios: 0.27.0
   firebase: 8.8.0
   firebase-admin: 9.11.0
@@ -768,8 +768,8 @@ packages:
     resolution: {integrity: sha512-ZSHbiwTrISoaTbpercmYGuY7QTg7HxfFyNgbJBaYbwHWbzMhpEdGTsmMpaBXIU6iiqwEEDaIyD8O6yJ+H5DWCg==}
     dev: false
 
-  /@tailwindcss/line-clamp/0.3.0_tailwindcss@2.2.7:
-    resolution: {integrity: sha512-ffDDclrqr3sy8cpChCozedDUAN8enxqAiWeH8d4dGQ2hcXlxf51+7KleveFi/n/TxEuRVApoL7hICeDOdYPKpg==}
+  /@tailwindcss/line-clamp/0.4.0_tailwindcss@2.2.7:
+    resolution: {integrity: sha512-HQZo6gfx1D0+DU3nWlNLD5iA6Ef4JAXh0LeD8lOGrJwEDBwwJNKQza6WoXhhY1uQrxOuU8ROxV7CqiQV4CoiLw==}
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
