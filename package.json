@@ -27,7 +27,7 @@
         "react-responsive-carousel": "^3.2.18",
         "react-toastify": "^7.0.4",
         "react-transition-group": "^4.4.1",
-        "stripe": "^8.149.0"
+        "stripe": "^9.0.0"
     },
     "license": "MIT",
     "devDependencies": {
