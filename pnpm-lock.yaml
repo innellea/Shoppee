@@ -17,7 +17,7 @@ specifiers:
   postcss: ^8.2.15
   react: 17.0.2
   react-currency-formatter: ^1.1.0
-  react-dom: 17.0.2
+  react-dom: 18.2.0
   react-redux: 7.2.8
   react-responsive-carousel: ^3.2.18
   react-toastify: ^7.0.4
@@ -36,15 +36,15 @@ dependencies:
   lodash: 4.17.21
   micro: 9.3.4
   moment: 2.29.1
-  next: 12.1.6_react-dom@17.0.2+react@17.0.2
-  next-auth: 3.27.3_react-dom@17.0.2+react@17.0.2
+  next: 12.1.6_react-dom@18.2.0+react@17.0.2
+  next-auth: 3.27.3_react-dom@18.2.0+react@17.0.2
   react: 17.0.2
   react-currency-formatter: 1.1.0_react@17.0.2
-  react-dom: 17.0.2_react@17.0.2
-  react-redux: 7.2.8_react-dom@17.0.2+react@17.0.2
+  react-dom: 18.2.0_react@17.0.2
+  react-redux: 7.2.8_react-dom@18.2.0+react@17.0.2
   react-responsive-carousel: 3.2.20
-  react-toastify: 7.0.4_react-dom@17.0.2+react@17.0.2
-  react-transition-group: 4.4.2_react-dom@17.0.2+react@17.0.2
+  react-toastify: 7.0.4_react-dom@18.2.0+react@17.0.2
+  react-transition-group: 4.4.2_react-dom@18.2.0+react@17.0.2
   stripe: 8.165.0
 
 devDependencies:
@@ -528,7 +528,7 @@ packages:
       next-auth: ^3.17.2
     dependencies:
       '@babel/runtime': 7.15.4
-      next-auth: 3.27.3_react-dom@17.0.2+react@17.0.2
+      next-auth: 3.27.3_react-dom@18.2.0+react@17.0.2
     dev: false
 
   /@next-auth/typeorm-legacy-adapter/0.0.2-canary.129_next-auth@3.27.3:
@@ -550,7 +550,7 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.15.4
-      next-auth: 3.27.3_react-dom@17.0.2+react@17.0.2
+      next-auth: 3.27.3_react-dom@18.2.0+react@17.0.2
       require_optional: 1.0.1
       typeorm: 0.2.34
     transitivePeerDependencies:
@@ -748,7 +748,7 @@ packages:
     dependencies:
       immer: 9.0.7
       react: 17.0.2
-      react-redux: 7.2.8_react-dom@17.0.2+react@17.0.2
+      react-redux: 7.2.8_react-dom@18.2.0+react@17.0.2
       redux: 4.1.2
       redux-thunk: 2.4.1_redux@4.1.2
       reselect: 4.1.5
@@ -2181,7 +2181,7 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  /next-auth/3.27.3_react-dom@17.0.2+react@17.0.2:
+  /next-auth/3.27.3_react-dom@18.2.0+react@17.0.2:
     resolution: {integrity: sha512-U7LRrSc3ZBUKQcOpqJfVui80jPpx0MQAmtCPI7dJ9DjDg8AfxRBzk59oNCE5MLlbMDb83gEtOu+Mr5hi28qmCg==}
     peerDependencies:
       react: ^16.13.1 || ^17
@@ -2200,7 +2200,7 @@ packages:
       preact-render-to-string: 5.1.19_preact@10.5.14
       querystring: 0.2.1
       react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      react-dom: 18.2.0_react@17.0.2
     transitivePeerDependencies:
       - '@prisma/client'
       - mongodb
@@ -2210,7 +2210,7 @@ packages:
       - supports-color
     dev: false
 
-  /next/12.1.6_react-dom@17.0.2+react@17.0.2:
+  /next/12.1.6_react-dom@18.2.0+react@17.0.2:
     resolution: {integrity: sha512-cebwKxL3/DhNKfg9tPZDQmbRKjueqykHHbgaoG4VBRH3AHQJ2HO0dbKFiS1hPhe1/qgc2d/hFeadsbPicmLD+A==}
     engines: {node: '>=12.22.0'}
     hasBin: true
@@ -2232,7 +2232,7 @@ packages:
       caniuse-lite: 1.0.30001342
       postcss: 8.4.5
       react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      react-dom: 18.2.0_react@17.0.2
       styled-jsx: 5.0.2_react@17.0.2
     optionalDependencies:
       '@next/swc-android-arm-eabi': 12.1.6
@@ -2557,15 +2557,14 @@ packages:
       react: 17.0.2
     dev: false
 
-  /react-dom/17.0.2_react@17.0.2:
-    resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
+  /react-dom/18.2.0_react@17.0.2:
+    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
-      react: 17.0.2
+      react: ^18.2.0
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
       react: 17.0.2
-      scheduler: 0.20.2
+      scheduler: 0.23.0
     dev: false
 
   /react-easy-swipe/0.0.21:
@@ -2583,7 +2582,7 @@ packages:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
     dev: false
 
-  /react-redux/7.2.8_react-dom@17.0.2+react@17.0.2:
+  /react-redux/7.2.8_react-dom@18.2.0+react@17.0.2:
     resolution: {integrity: sha512-6+uDjhs3PSIclqoCk0kd6iX74gzrGc3W5zcAjbrFgEdIjRSQObdIwfx80unTkVUYvbQ95Y8Av3OvFHq1w5EOUw==}
     peerDependencies:
       react: ^16.8.3 || ^17 || ^18
@@ -2601,7 +2600,7 @@ packages:
       loose-envify: 1.4.0
       prop-types: 15.7.2
       react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      react-dom: 18.2.0_react@17.0.2
       react-is: 17.0.2
     dev: false
 
@@ -2613,7 +2612,7 @@ packages:
       react-easy-swipe: 0.0.21
     dev: false
 
-  /react-toastify/7.0.4_react-dom@17.0.2+react@17.0.2:
+  /react-toastify/7.0.4_react-dom@18.2.0+react@17.0.2:
     resolution: {integrity: sha512-Rol7+Cn39hZp5hQ/k6CbMNE2CKYV9E5OQdC/hBLtIQU2xz7DdAm7xil4NITQTHR6zEbE5RVFbpgSwTD7xRGLeQ==}
     peerDependencies:
       react: '>=16'
@@ -2621,10 +2620,10 @@ packages:
     dependencies:
       clsx: 1.1.1
       react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      react-dom: 18.2.0_react@17.0.2
     dev: false
 
-  /react-transition-group/4.4.2_react-dom@17.0.2+react@17.0.2:
+  /react-transition-group/4.4.2_react-dom@18.2.0+react@17.0.2:
     resolution: {integrity: sha512-/RNYfRAMlZwDSr6z4zNKV6xu53/e2BuaBbGhbyYIXTrmgu/bGHzmqOs7mJSJBHy9Ud+ApHx3QjrkKSp1pxvlFg==}
     peerDependencies:
       react: '>=16.6.0'
@@ -2635,7 +2634,7 @@ packages:
       loose-envify: 1.4.0
       prop-types: 15.7.2
       react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      react-dom: 18.2.0_react@17.0.2
     dev: false
 
   /react/17.0.2:
@@ -2765,11 +2764,10 @@ packages:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
     dev: false
 
-  /scheduler/0.20.2:
-    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
+  /scheduler/0.23.0:
+    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
     dev: false
 
   /semver/5.7.1:
