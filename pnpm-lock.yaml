@@ -15,7 +15,7 @@ specifiers:
   next: latest
   next-auth: ^3.23.2
   postcss: ^8.2.15
-  react: 17.0.2
+  react: 18.2.0
   react-currency-formatter: ^1.1.0
   react-dom: 17.0.2
   react-redux: 7.2.8
@@ -26,8 +26,8 @@ specifiers:
   tailwindcss: ^2.1.2
 
 dependencies:
-  '@heroicons/react': 1.0.3_react@17.0.2
-  '@reduxjs/toolkit': 1.8.2_react-redux@7.2.8+react@17.0.2
+  '@heroicons/react': 1.0.3_react@18.2.0
+  '@reduxjs/toolkit': 1.8.2_react-redux@7.2.8+react@18.2.0
   '@stripe/stripe-js': 1.16.0
   '@tailwindcss/line-clamp': 0.4.0_tailwindcss@2.2.7
   axios: 0.27.0
@@ -36,15 +36,15 @@ dependencies:
   lodash: 4.17.21
   micro: 9.3.4
   moment: 2.29.1
-  next: 12.1.6_react-dom@17.0.2+react@17.0.2
-  next-auth: 3.27.3_react-dom@17.0.2+react@17.0.2
-  react: 17.0.2
-  react-currency-formatter: 1.1.0_react@17.0.2
-  react-dom: 17.0.2_react@17.0.2
-  react-redux: 7.2.8_react-dom@17.0.2+react@17.0.2
+  next: 12.1.6_react-dom@17.0.2+react@18.2.0
+  next-auth: 3.27.3_react-dom@17.0.2+react@18.2.0
+  react: 18.2.0
+  react-currency-formatter: 1.1.0_react@18.2.0
+  react-dom: 17.0.2_react@18.2.0
+  react-redux: 7.2.8_react-dom@17.0.2+react@18.2.0
   react-responsive-carousel: 3.2.20
-  react-toastify: 7.0.4_react-dom@17.0.2+react@17.0.2
-  react-transition-group: 4.4.2_react-dom@17.0.2+react@17.0.2
+  react-toastify: 7.0.4_react-dom@17.0.2+react@18.2.0
+  react-transition-group: 4.4.2_react-dom@17.0.2+react@18.2.0
   stripe: 8.165.0
 
 devDependencies:
@@ -513,12 +513,12 @@ packages:
       yargs: 16.2.0
     dev: false
 
-  /@heroicons/react/1.0.3_react@17.0.2:
+  /@heroicons/react/1.0.3_react@18.2.0:
     resolution: {integrity: sha512-wdzWbDiFKzeL6xFJsgY2PqvDkx4hFmQDpEFRVj872EA71XOjr8g0DQj5rHWm0y7LwfGOFL0eQmEiMbTyGNOnTQ==}
     peerDependencies:
       react: '>= 16'
     dependencies:
-      react: 17.0.2
+      react: 18.2.0
     dev: false
 
   /@next-auth/prisma-legacy-adapter/0.0.1-canary.127_next-auth@3.27.3:
@@ -528,7 +528,7 @@ packages:
       next-auth: ^3.17.2
     dependencies:
       '@babel/runtime': 7.15.4
-      next-auth: 3.27.3_react-dom@17.0.2+react@17.0.2
+      next-auth: 3.27.3_react-dom@17.0.2+react@18.2.0
     dev: false
 
   /@next-auth/typeorm-legacy-adapter/0.0.2-canary.129_next-auth@3.27.3:
@@ -550,7 +550,7 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.15.4
-      next-auth: 3.27.3_react-dom@17.0.2+react@17.0.2
+      next-auth: 3.27.3_react-dom@17.0.2+react@18.2.0
       require_optional: 1.0.1
       typeorm: 0.2.34
     transitivePeerDependencies:
@@ -735,7 +735,7 @@ packages:
     resolution: {integrity: sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=}
     dev: false
 
-  /@reduxjs/toolkit/1.8.2_react-redux@7.2.8+react@17.0.2:
+  /@reduxjs/toolkit/1.8.2_react-redux@7.2.8+react@18.2.0:
     resolution: {integrity: sha512-CtPw5TkN1pHRigMFCOS/0qg3b/yfPV5qGCsltVnIz7bx4PKTJlGHYfIxm97qskLknMzuGfjExaYdXJ77QTL0vg==}
     peerDependencies:
       react: ^16.9.0 || ^17.0.0 || ^18
@@ -747,8 +747,8 @@ packages:
         optional: true
     dependencies:
       immer: 9.0.7
-      react: 17.0.2
-      react-redux: 7.2.8_react-dom@17.0.2+react@17.0.2
+      react: 18.2.0
+      react-redux: 7.2.8_react-dom@17.0.2+react@18.2.0
       redux: 4.1.2
       redux-thunk: 2.4.1_redux@4.1.2
       reselect: 4.1.5
@@ -2181,7 +2181,7 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  /next-auth/3.27.3_react-dom@17.0.2+react@17.0.2:
+  /next-auth/3.27.3_react-dom@17.0.2+react@18.2.0:
     resolution: {integrity: sha512-U7LRrSc3ZBUKQcOpqJfVui80jPpx0MQAmtCPI7dJ9DjDg8AfxRBzk59oNCE5MLlbMDb83gEtOu+Mr5hi28qmCg==}
     peerDependencies:
       react: ^16.13.1 || ^17
@@ -2199,8 +2199,8 @@ packages:
       preact: 10.5.14
       preact-render-to-string: 5.1.19_preact@10.5.14
       querystring: 0.2.1
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      react: 18.2.0
+      react-dom: 17.0.2_react@18.2.0
     transitivePeerDependencies:
       - '@prisma/client'
       - mongodb
@@ -2210,7 +2210,7 @@ packages:
       - supports-color
     dev: false
 
-  /next/12.1.6_react-dom@17.0.2+react@17.0.2:
+  /next/12.1.6_react-dom@17.0.2+react@18.2.0:
     resolution: {integrity: sha512-cebwKxL3/DhNKfg9tPZDQmbRKjueqykHHbgaoG4VBRH3AHQJ2HO0dbKFiS1hPhe1/qgc2d/hFeadsbPicmLD+A==}
     engines: {node: '>=12.22.0'}
     hasBin: true
@@ -2231,9 +2231,9 @@ packages:
       '@next/env': 12.1.6
       caniuse-lite: 1.0.30001342
       postcss: 8.4.5
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-      styled-jsx: 5.0.2_react@17.0.2
+      react: 18.2.0
+      react-dom: 17.0.2_react@18.2.0
+      styled-jsx: 5.0.2_react@18.2.0
     optionalDependencies:
       '@next/swc-android-arm-eabi': 12.1.6
       '@next/swc-android-arm64': 12.1.6
@@ -2548,23 +2548,23 @@ packages:
       unpipe: 1.0.0
     dev: false
 
-  /react-currency-formatter/1.1.0_react@17.0.2:
+  /react-currency-formatter/1.1.0_react@18.2.0:
     resolution: {integrity: sha512-5AIHYk8WKKKfXfxQW7i7V3DTQkDNqRcqAWyTy3KTs89qooOTj1o5VWkPOLjIxKOSGir6nUt8Aw8WXxAGn5nY6w==}
     peerDependencies:
       react: 16.x
     dependencies:
       prop-types: 15.7.2
-      react: 17.0.2
+      react: 18.2.0
     dev: false
 
-  /react-dom/17.0.2_react@17.0.2:
+  /react-dom/17.0.2_react@18.2.0:
     resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
     peerDependencies:
       react: 17.0.2
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-      react: 17.0.2
+      react: 18.2.0
       scheduler: 0.20.2
     dev: false
 
@@ -2583,7 +2583,7 @@ packages:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
     dev: false
 
-  /react-redux/7.2.8_react-dom@17.0.2+react@17.0.2:
+  /react-redux/7.2.8_react-dom@17.0.2+react@18.2.0:
     resolution: {integrity: sha512-6+uDjhs3PSIclqoCk0kd6iX74gzrGc3W5zcAjbrFgEdIjRSQObdIwfx80unTkVUYvbQ95Y8Av3OvFHq1w5EOUw==}
     peerDependencies:
       react: ^16.8.3 || ^17 || ^18
@@ -2600,8 +2600,8 @@ packages:
       hoist-non-react-statics: 3.3.2
       loose-envify: 1.4.0
       prop-types: 15.7.2
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      react: 18.2.0
+      react-dom: 17.0.2_react@18.2.0
       react-is: 17.0.2
     dev: false
 
@@ -2613,18 +2613,18 @@ packages:
       react-easy-swipe: 0.0.21
     dev: false
 
-  /react-toastify/7.0.4_react-dom@17.0.2+react@17.0.2:
+  /react-toastify/7.0.4_react-dom@17.0.2+react@18.2.0:
     resolution: {integrity: sha512-Rol7+Cn39hZp5hQ/k6CbMNE2CKYV9E5OQdC/hBLtIQU2xz7DdAm7xil4NITQTHR6zEbE5RVFbpgSwTD7xRGLeQ==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
     dependencies:
       clsx: 1.1.1
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      react: 18.2.0
+      react-dom: 17.0.2_react@18.2.0
     dev: false
 
-  /react-transition-group/4.4.2_react-dom@17.0.2+react@17.0.2:
+  /react-transition-group/4.4.2_react-dom@17.0.2+react@18.2.0:
     resolution: {integrity: sha512-/RNYfRAMlZwDSr6z4zNKV6xu53/e2BuaBbGhbyYIXTrmgu/bGHzmqOs7mJSJBHy9Ud+ApHx3QjrkKSp1pxvlFg==}
     peerDependencies:
       react: '>=16.6.0'
@@ -2634,16 +2634,15 @@ packages:
       dom-helpers: 5.2.1
       loose-envify: 1.4.0
       prop-types: 15.7.2
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      react: 18.2.0
+      react-dom: 17.0.2_react@18.2.0
     dev: false
 
-  /react/17.0.2:
-    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
+  /react/18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
     dev: false
 
   /readable-stream/3.6.0:
@@ -2891,7 +2890,7 @@ packages:
     dev: false
     optional: true
 
-  /styled-jsx/5.0.2_react@17.0.2:
+  /styled-jsx/5.0.2_react@18.2.0:
     resolution: {integrity: sha512-LqPQrbBh3egD57NBcHET4qcgshPks+yblyhPlH2GY8oaDgKs8SK4C3dBh3oSJjgzJ3G5t1SYEZGHkP+QEpX9EQ==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -2904,7 +2903,7 @@ packages:
       babel-plugin-macros:
         optional: true
     dependencies:
-      react: 17.0.2
+      react: 18.2.0
     dev: false
 
   /supports-color/2.0.0:
